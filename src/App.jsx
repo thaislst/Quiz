@@ -6,6 +6,9 @@ import QuizPage from './components/QuizPage';
 function App() {
 
   const [name, setName] = useState('');
+  const [page, setPage] = useState('inputName');
+
+  
  
   const handleChangeName = (e) => {
     setName(e.target.value);
@@ -14,25 +17,28 @@ function App() {
 
   const handleSubmitName = (e) => {
     e.preventDefault();
+    setPage('quizPage')
 
   }
 
-  return (
-    <>
-     <InputNamePage onSubmit={handleSubmitName} onChange={handleChangeName} name={name} />
-
-
-
-        {/* <div className='page'>
-          <h2>Score</h2>
-          <div>Acertos</div>
-          <div>Erros</div>
-          <div>Procentagem</div>
-        </div> */}
-      
-    </>
-  )
+  if(page === 'inputName') {
+    return (
+      <>  
+       <InputNamePage onSubmit={handleSubmitName} onChange={handleChangeName} name={name} /> 
+      </>
+    )
+  }else if (page === 'quizPage') {
+    return (
+      <>  
+       <QuizPage name={name} /> 
+      </>
+    )
   }
+
+  
+
+
+}
 
 
 export default App
