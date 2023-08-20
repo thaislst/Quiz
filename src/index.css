@@ -1,0 +1,103 @@
+:root {
+  font-family: Inter, sans-serif;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --bg-color: #F5F4F4;
+  --text-color-black: #443F3F;
+  --text-color-white: #EDEDED;
+  --text-color-light-gray: #8E8787;
+  --button-color: #e8e8e8;
+  --sig-in-button: #1f883d;
+
+ 
+}
+
+* {
+  background: var(--bg-color);
+  
+}
+
+/*  As classes cover abaixo fazem parte de um conjunto de técnicas do livro Every Layout (https://every-layout.dev/layouts/cover/)
+que tem o objetivo de centralizar os elementos de uma página de forma responsiva */
+
+.center {
+  max-width: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20vh;
+  padding: 3rem;
+}
+
+
+.form-box {
+  backgroud: white;
+  color: var(--text-color-black);
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  color: var(--text-color-black);
+
+
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+[class^='stack'] * {
+  /* top and bottom margins in horizontal-tb writing mode */
+  margin-block: 0;
+}
+
+.stack * + * {
+  margin-block-start: 1.5rem;
+}
+
+
+.stack-small * + * {
+  margin-block-start: 0.5rem;
+}
+
+label {
+  color: var( --text-color-black);
+  font-weight: 700;
+  font-size: 1.33rem;
+}
+
+input[type=text] {
+  background: var(--button-color);
+  border: none;
+  border-radius: 5px;
+  min-width: 200px;
+  min-height: 40px;  
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: var(--text-color-black);
+  padding: 5px 15px ;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--sig-in-button);
+  border: none;
+  border-radius: 5px;
+  min-width: 200px;
+  min-height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: var( --text-color-white);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+
+
+
+
+
+ 
