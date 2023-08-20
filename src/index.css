@@ -8,11 +8,12 @@
   -webkit-text-size-adjust: 100%;
 
   --bg-color: #F5F4F4;
+  --color-dark-gray: #7A7A7A;
   --text-color-black: #443F3F;
   --text-color-white: #EDEDED;
-  --text-color-light-gray: #8E8787;
+  --color-light-gray: #8E8787;
   --button-color: #e8e8e8;
-  --sig-in-button: #1f883d;
+  --sign-in-button: #1f883d;
 
  
 }
@@ -29,7 +30,7 @@ que tem o objetivo de centralizar os elementos de uma página de forma responsiv
   max-width: 60vh;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20vh;
+  margin-top: 10vh;
   padding: 3rem;
 }
 
@@ -40,8 +41,7 @@ que tem o objetivo de centralizar os elementos de uma página de forma responsiv
   font-size: 1rem;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  color: var(--text-color-black);
-
+  color: var(--text-color-black)
 
 }
 
@@ -71,20 +71,9 @@ label {
   font-size: 1.33rem;
 }
 
-input[type=text] {
-  background: var(--button-color);
-  border: none;
-  border-radius: 5px;
-  min-width: 200px;
-  min-height: 40px;  
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  color: var(--text-color-black);
-  padding: 5px 15px ;
-  font-size: 1rem;
-}
 
-button {
-  background: var(--sig-in-button);
+.button-sign-in {
+  background: var(--sign-in-button);
   border: none;
   border-radius: 5px;
   min-width: 200px;
@@ -93,6 +82,46 @@ button {
   color: var( --text-color-white);
   font-weight: 700;
   font-size: 1rem;
+}
+
+header {
+  background: var(--color-dark-gray);
+  color: var(--text-color-white);
+  font-weight: 700;
+  border-radius: 5px; 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.5rem 2rem;
+}
+
+.question {
+  font-size: 1rem;
+  font-weight: 700;  
+}
+
+.answere {
+  padding: 0.5rem 2rem;
+
+}
+
+.button-ligth-gray {
+  background: var(--button-color);
+  border: none;
+  border-radius: 5px;
+  min-width: 200px;
+  min-height: 40px;  
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: var(--text-color-black);
+  font-size: 1rem;
+  padding-left: 1.5rem;
+}
+
+.button-sign-in:hover {
+  transform: translateY(-0.15em);
+}
+
+.answere:focus {
+  background: var(--color-dark-gray);
+  color: var(--text-color-white);
 }
 
 

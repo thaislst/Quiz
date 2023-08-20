@@ -8,7 +8,7 @@ export default function InputNamePage({onSubmit, onChange, name}) {
              <div className="stack stack-small">
               <label htmlFor="fname">Nome</label>
               <input
-                className='text-input'
+                className='button-ligth-gray'
                 type="text"
                 id='fname' 
                 placeholder='Ex: João Silva'
@@ -16,7 +16,7 @@ export default function InputNamePage({onSubmit, onChange, name}) {
                 value={name}
               />
             </div>    
-            <button type="submit" onSubmit={onSubmit}>Acessar</button>
+            <button className="button-sign-in" type="submit" onSubmit={onSubmit}>Acessar</button>
           </form> 
         </div>
       </div>

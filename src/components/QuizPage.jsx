@@ -1,15 +1,15 @@
 
 export default function QuizPage({name}) {
   return (
-        <div className='quiz-page stack'>
-          <header>{name}</header>
-          <div className='quiz-box'>
-            <div className='question'>Pergunta</div>
-            <button className='answer'>Resposta 1</button>
-            <button className='answer'>Resposta 2</button>
-            <button className='answer'>Resposta 3</button>
-          </div>
-        </div>  
-
+    <div className='quiz-page stack'>
+      
+      <div className='form-box center stack'>
+        <header>{name}</header>
+        <div className='question'>O que significa a sigla CPU?</div>
+        <button className='button-ligth-gray answere'>1. Central Processing Unit</button>
+        <button className='button-ligth-gray answere'>1. Central Processing Unit</button>
+        <button className='button-ligth-gray answere'>1. Central Processing Unit</button>
+      </div>  
+    </div>  
   )
-} 
+}
