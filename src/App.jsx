@@ -11,6 +11,7 @@ function App() {
   const [activities, setActivities] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
+
   
 
   const fetchQuestionData = () => {
@@ -21,31 +22,46 @@ function App() {
       .then(response => {
         setActivities(response.data)
       })
+
   }
 
   useEffect(() => {
     fetchQuestionData()
   }, [])
 
- 
+
+  
   const handleChangeName = (e) => {
     setName(e.target.value);
   }
 
   const handleSubmitName = (e) => {
     e.preventDefault();
-    setPage('quizPage')
+    setPage('quizPage');
 
-    
   }
 
- 
+  
+  const handleClickAns = (answer) => () => {
+    if(currentQuestionIndex < activities.length-1){
+      if (answer === activities[currentQuestionIndex].resposta_correta) {
+        setCurrentQuestionIndex(currentQuestionIndex + 1)
+        setScore(score +1)
+      }else {
+        setCurrentQuestionIndex(currentQuestionIndex + 1)
+        setScore(score + 0)
+      }
+    }else {
+      return (
+        <>
+        <ScorePage /> 
+        <h1>{`Score: ${score}`}</h1>
+        </>
 
-  // const handleClickAns = (e) => {
+      )
+    }
 
-  // }
-
-
+  }
 
   if(page === 'inputName') {
     return (
@@ -58,15 +74,10 @@ function App() {
         name={name}   
         activities={activities} 
         currentQuestionIndex={currentQuestionIndex}
-        
+        onClick={handleClickAns}
         /> 
 
       </>
-
-    )
-  }else {
-    return (
-      <ScorePage /> 
     )
   }
 
