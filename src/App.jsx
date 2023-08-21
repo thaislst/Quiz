@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import InputNamePage from './components/InputNamePage';
 import QuizPage from './components/QuizPage';
@@ -8,6 +8,24 @@ function App() {
 
   const [name, setName] = useState('');
   const [page, setPage] = useState('inputName');
+  const [activities, setActivities] = useState([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [score, setScore] = useState(0);
+  
+
+  const fetchQuestionData = () => {
+    fetch("https://be-teste-tec-b5dc1a90bbd0.herokuapp.com/api/atividades/list")
+      .then(response => { 
+        return response.json()
+      })
+      .then(response => {
+        setActivities(response.data)
+      })
+  }
+
+  useEffect(() => {
+    fetchQuestionData()
+  }, [])
 
  
   const handleChangeName = (e) => {
@@ -17,7 +35,15 @@ function App() {
   const handleSubmitName = (e) => {
     e.preventDefault();
     setPage('quizPage')
+
+    
   }
+
+ 
+
+  // const handleClickAns = (e) => {
+
+  // }
 
 
 
@@ -27,7 +53,16 @@ function App() {
     )
   }else if (page === 'quizPage') {
     return (
-       <QuizPage name={name} /> 
+      <>
+        <QuizPage 
+        name={name}   
+        activities={activities} 
+        currentQuestionIndex={currentQuestionIndex}
+        
+        /> 
+
+      </>
+
     )
   }else {
     return (
