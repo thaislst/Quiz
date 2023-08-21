@@ -15,9 +15,6 @@ To get the frontend running locally:
 
 This Application is a simple and responsive Quiz with questions related to computer science. The questions are been downloaded from an API. At the end of the Quiz, you can view the score.
 
-![Screen Shot Quiz App](https://github.com/thaislst/Desafio-tecnico-front-end/assets/89035755/fb6d5b24-c66a-4217-843a-81747864eff4)
-
-
 ## Known issues
 In this app, the react router was not used to switch pages.
 
