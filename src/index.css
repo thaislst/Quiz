@@ -23,8 +23,8 @@
   
 }
 
-/*  As classes cover abaixo fazem parte de um conjunto de técnicas do livro Every Layout (https://every-layout.dev/layouts/cover/)
-que tem o objetivo de centralizar os elementos de uma página de forma responsiva */
+/*  As classes center e stack abaixo fazem parte de um conjunto de técnicas do livro Every Layout (https://every-layout.dev/layouts/cover/)
+que tem o objetivo de centralizar os elementos e garantir espaços entre eles de forma responsiva */
 
 .center {
   max-width: 60vh;
@@ -34,16 +34,6 @@ que tem o objetivo de centralizar os elementos de uma página de forma responsiv
   padding: 3rem;
 }
 
-
-.form-box {
-  backgroud: white;
-  color: var(--text-color-black);
-  font-size: 1rem;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  color: var(--text-color-black)
-
-}
 
 .stack {
   display: flex;
@@ -56,13 +46,24 @@ que tem o objetivo de centralizar os elementos de uma página de forma responsiv
   margin-block: 0;
 }
 
-.stack * + * {
+.stack > * + *  {
   margin-block-start: 1.5rem;
 }
 
 
 .stack-small * + * {
   margin-block-start: 0.5rem;
+}
+
+.form-box {
+  backgroud: white;
+  color: var(--text-color-black);
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  color: var(--text-color-black);
+  min-width: 30vw;
+
 }
 
 label {
@@ -75,8 +76,7 @@ label {
 .button-sign-in {
   background: var(--sign-in-button);
   border: none;
-  border-radius: 5px;
-  min-width: 200px;
+  border-radius: 5px; 
   min-height: 40px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: var( --text-color-white);
@@ -91,6 +91,7 @@ header {
   border-radius: 5px; 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 0.5rem 2rem;
+  
 }
 
 .question {
@@ -98,30 +99,48 @@ header {
   font-weight: 700;  
 }
 
-.answere {
-  padding: 0.5rem 2rem;
-
-}
 
 .button-ligth-gray {
   background: var(--button-color);
   border: none;
   border-radius: 5px;
-  min-width: 200px;
+  min-width: 20vw;
   min-height: 40px;  
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  color: var(--text-color-black);
+  color: var(--text-color-4lack);
   font-size: 1rem;
-  padding-left: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin-block-start: 1rem;
+
+
+  
 }
 
 .button-sign-in:hover {
   transform: translateY(-0.15em);
 }
 
-.answere:focus {
+.answer:focus {
   background: var(--color-dark-gray);
   color: var(--text-color-white);
+}
+
+.score-button {
+  display:flex; 
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 30vw;
+
+}
+
+.score {
+  
+  text-align: center;
+  background: var(--button-color); 
+  font-size: 1rem;
+  font-weight: 700;  
+
 }
 
 

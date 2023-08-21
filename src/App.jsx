@@ -43,25 +43,21 @@ function App() {
 
   
   const handleClickAns = (answer) => () => {
-    if(currentQuestionIndex < activities.length-1){
+
       if (answer === activities[currentQuestionIndex].resposta_correta) {
-        setCurrentQuestionIndex(currentQuestionIndex + 1)
-        setScore(score +1)
-      }else {
-        setCurrentQuestionIndex(currentQuestionIndex + 1)
-        setScore(score + 0)
+        setScore(score + 1)
       }
-    }else {
-      return (
-        <>
-        <ScorePage /> 
-        <h1>{`Score: ${score}`}</h1>
-        </>
 
-      )
-    }
+      const nextQuestionIndex = currentQuestionIndex + 1;
 
-  }
+      if (nextQuestionIndex <= activities.length-1) {
+        setCurrentQuestionIndex(nextQuestionIndex);
+      } else {
+        setPage('scorePage')
+      }
+
+  }    
+
 
   if(page === 'inputName') {
     return (
@@ -79,8 +75,13 @@ function App() {
 
       </>
     )
+  }else if (page === 'scorePage') {
+    return (
+      <>
+        <ScorePage score={score} activities={activities} name={name}/> 
+      </>
+    )
   }
-
 
 
 }
