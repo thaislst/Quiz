@@ -2,9 +2,8 @@
 
 export default function InputNamePage({onSubmit, onChange, name}) {
   return (
-    <div className='inicial-page'>
         <div className='form-box center'>
-          <form className='stack' action="" onSubmit={onSubmit}>
+          <form className='stack' onSubmit={onSubmit}>
              <div className="stack stack-small">
               <label htmlFor="fname">Nome</label>
               <input
@@ -19,6 +18,5 @@ export default function InputNamePage({onSubmit, onChange, name}) {
             <button className="button-sign-in" type="submit" onSubmit={onSubmit}>Acessar</button>
           </form> 
         </div>
-      </div>
   );
 }

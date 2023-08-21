@@ -1,5 +1,4 @@
       
-
 export default function ScorePage({score, activities, name}) {
 
   return (

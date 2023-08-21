@@ -14,13 +14,10 @@
   --color-light-gray: #8E8787;
   --button-color: #e8e8e8;
   --sign-in-button: #1f883d;
-
- 
 }
 
 * {
   background: var(--bg-color);
-  
 }
 
 /*  As classes center e stack abaixo fazem parte de um conjunto de técnicas do livro Every Layout (https://every-layout.dev/layouts/cover/)
@@ -33,7 +30,6 @@ que tem o objetivo de centralizar os elementos e garantir espaços entre eles de
   margin-top: 10vh;
   padding: 3rem;
 }
-
 
 .stack {
   display: flex;
@@ -50,7 +46,6 @@ que tem o objetivo de centralizar os elementos e garantir espaços entre eles de
   margin-block-start: 1.5rem;
 }
 
-
 .stack-small * + * {
   margin-block-start: 0.5rem;
 }
@@ -59,11 +54,9 @@ que tem o objetivo de centralizar os elementos e garantir espaços entre eles de
   backgroud: white;
   color: var(--text-color-black);
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  color: var(--text-color-black);
   min-width: 30vw;
-
 }
 
 label {
@@ -76,10 +69,10 @@ label {
 .button-sign-in {
   background: var(--sign-in-button);
   border: none;
-  border-radius: 5px; 
-  min-height: 40px;
+  border-radius: 0.5rem; 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: var( --text-color-white);
+  min-height: 2.5rem;
   font-weight: 700;
   font-size: 1rem;
 }
@@ -87,11 +80,10 @@ label {
 header {
   background: var(--color-dark-gray);
   color: var(--text-color-white);
-  font-weight: 700;
-  border-radius: 5px; 
+  border-radius: 0.5rem; 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-weight: 700;
   padding: 0.5rem 2rem;
-  
 }
 
 .question {
@@ -99,48 +91,49 @@ header {
   font-weight: 700;  
 }
 
-
 .button-ligth-gray {
   background: var(--button-color);
   border: none;
-  border-radius: 5px;
-  min-width: 20vw;
-  min-height: 40px;  
+  border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: var(--text-color-4lack);
   font-size: 1rem;
+  min-height: 2.5rem;  
   padding: 0.5rem 1rem;
   margin-block-start: 1rem;
-
-
-  
+  cursor: pointer;
 }
 
 .button-sign-in:hover {
   transform: translateY(-0.15em);
+  cursor: pointer;
 }
 
-.answer:focus {
+.answer {
+  text-align: left;
+}
+
+.answer:hover {
   background: var(--color-dark-gray);
   color: var(--text-color-white);
 }
 
+.answer:focus {
+  outline: none;
+}
+
 .score-button {
   display:flex; 
-  gap: 30px;
   justify-content: space-between;
   align-items: center;
-  min-width: 30vw;
-
+  min-width: 100%;
 }
 
 .score {
-  
   text-align: center;
   background: var(--button-color); 
   font-size: 1rem;
   font-weight: 700;  
-
 }
 
 
